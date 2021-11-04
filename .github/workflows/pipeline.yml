@@ -15,3 +15,6 @@ jobs:
           heroku_app_name: "container-deployment-exercise" #Must be unique in Heroku
           heroku_email: ${{secrets.MAIL}}
           usedocker: true
+          justlogin: true
+      - run: |
+          heroku container:login
